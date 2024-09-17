@@ -9,7 +9,7 @@
     "lint": "eslint",
     "preview": "vite preview",
     "pretest": "pnpm run lint",
-    "format": "prettier --log-level warn --write \"**/*.{ts,tsx,css,md}\"",
+    "format": "prettier --log-level warn --write \"**/*.{json,js,ts,jsx,tsx,html,md,css}\"",
     "posttest": "pnpm run format",
     "prepare": "husky"
   },
@@ -45,7 +45,7 @@
     "vite": "^5.4.6"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "eslint --cache --fix",
-    "*.{ts,tsx,js,jsx,html,css}": "prettier --write"
+    "*.{ts,tsx,js,jsx}": "eslint --cache --fix",
+    "*.{json,js,ts,jsx,tsx,html,md,css}": "prettier --write"
   }
 }
