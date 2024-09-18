@@ -23,7 +23,7 @@ export default function LayoutDefault({
 function Content({ children }: { children: React.ReactNode }) {
 	return (
 		<div id="page-container">
-			<div id="page-content" className="p-5 pb-12 min-h-screen">
+			<div id="page-content" className="min-h-screen">
 				<ThemeProviderClient>{children}</ThemeProviderClient>
 			</div>
 		</div>

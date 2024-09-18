@@ -12,11 +12,24 @@ import {
 } from "@/components/ui/dialog";
 import { Textarea } from "@/components/ui/textarea";
 
+interface GameJson {
+	categories: {
+		[key: string]: {
+			answer: string;
+			question: string;
+			isDailyDouble: boolean;
+		}[];
+	};
+	values: number[];
+}
+
 export default function Page() {
 	const showQuestion = useJeopardyStore((state) => state.showQuestion);
 	const questionCols = useJeopardyStore((state) => state.questionCols);
 	const categories = useJeopardyStore((state) => state.categories);
 	const values = useJeopardyStore((state) => state.values);
+
+	const setCategory = useJeopardyStore((state) => state.setCategory);
 
 	const [exported, setExported] = useState("");
 	const [dialogOpen, setDialogOpen] = useState(false);
@@ -42,6 +55,15 @@ export default function Page() {
 		setDialogOpen(true);
 	};
 
+	const importGame = (json: GameJson) => {
+		Object.keys(json.categories).forEach((category, idx) => {
+			setCategory(idx, category);
+			json.categories[category].forEach((question, idx2) => {
+				questionCols[idx].questions[idx2] = question;
+			});
+		});
+	};
+
 	return (
 		<div className="container mx-auto">
 			<div className="flex flex-row gap-2 justify-center">
@@ -57,7 +79,16 @@ export default function Page() {
 			</div>
 
 			<div className="flex flex-row justify-center my-4">
-				<Settings onExport={exportGame}></Settings>
+				<Settings
+					onExport={exportGame}
+					onImportSample={() => {
+						fetch("/sample.json")
+							.then((res) => res.json())
+							.then((data) => {
+								importGame(data);
+							});
+					}}
+				></Settings>
 			</div>
 
 			<Dialog open={dialogOpen} onOpenChange={(open) => setDialogOpen(open)}>

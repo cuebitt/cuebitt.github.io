@@ -14,8 +14,12 @@ import { useJeopardyStore } from "../store";
 
 interface SettingsProps {
 	onExport?: () => void;
+	onImportSample?: () => void;
 }
-export const Settings = ({ onExport = () => {} }: SettingsProps) => {
+export const Settings = ({
+	onExport = () => {},
+	onImportSample = () => {},
+}: SettingsProps) => {
 	const selected = useJeopardyStore((state) => state.selected);
 	const setQuestion = useJeopardyStore((state) => state.setQuestion);
 	const questionCols = useJeopardyStore((state) => state.questionCols);
@@ -112,6 +116,7 @@ export const Settings = ({ onExport = () => {} }: SettingsProps) => {
 								<Label htmlFor="show-question">Show Questions</Label>
 							</div>
 							<Button onClick={onExport}>Export</Button>
+							<Button onClick={onImportSample}>Import Sample Game</Button>
 						</div>
 					</CardContent>
 				</Card>
