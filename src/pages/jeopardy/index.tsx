@@ -1,7 +1,7 @@
-import { QuestionColumn } from "./components/QuestionColumn";
+import { QuestionColumn } from "./_components/QuestionColumn";
 import { nanoid } from "nanoid";
 import { useJeopardyStore } from "./store";
-import { Settings } from "./components/Settings";
+import { Settings } from "./_components/Settings";
 
 export default function JeopardyPage() {
 	const showQuestion = useJeopardyStore((state) => state.showQuestion);
