@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+Generated with [Bati](https://batijs.dev) ([version 277](https://www.npmjs.com/package/create-bati/v/0.0.277)) using this command:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname
-    }
-  }
-});
+```sh
+pnpm create bati --react --tailwindcss --shadcn-ui --eslint --prettier
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+# About this app
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
+This app is ready to start. It's powered by [Vike](https://vike.dev) and [React](https://react.dev/learn).
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules
-  }
-});
-```
+### `/pages/+config.ts`
+
+Such `+` files are [the interface](https://vike.dev/config) between Vike and your code. It defines:
+
+- A default [`<Layout>` component](https://vike.dev/Layout) (that wraps your [`<Page>` components](https://vike.dev/Page)).
+- A default [`title`](https://vike.dev/title).
+- Global [`<head>` tags](https://vike.dev/head-tags).
+
+### Routing
+
+[Vike's built-in router](https://vike.dev/routing) lets you choose between:
+
+- [Filesystem Routing](https://vike.dev/filesystem-routing) (the URL of a page is determined based on where its `+Page.jsx` file is located on the filesystem)
+- [Route Strings](https://vike.dev/route-string)
+- [Route Functions](https://vike.dev/route-function)
+
+### `/pages/_error/+Page.jsx`
+
+The [error page](https://vike.dev/error-page) which is rendered when errors occur.
+
+### `/pages/+onPageTransitionStart.ts` and `/pages/+onPageTransitionEnd.ts`
+
+The [`onPageTransitionStart()` hook](https://vike.dev/onPageTransitionStart), together with [`onPageTransitionEnd()`](https://vike.dev/onPageTransitionEnd), enables you to implement page transition animations.
+
+### SSR
+
+SSR is enabled by default. You can [disable it](https://vike.dev/ssr) for all your pages or only for some pages.
+
+### HTML Streaming
+
+You can enable/disable [HTML streaming](https://vike.dev/stream) for all your pages, or only for some pages while still using it for others.
+
+# About this app
+
+## shadcn/ui
+
+Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
+
+### Configuration
+
+see [shadcn/ui theming](https://ui.shadcn.com/docs/theming)
+
+Base Configuration can be found in `components.json` file.
+
+> [!NOTE] changes to the `components.json` file **will not** be reflected in existing components. Only new components will be affected.
+
+### Add Components to Your Project
+
+**Example:** add a component to your project. `pnpm shadcn add button`
+
+use the `<Button />` component in your project: `import { Button } from "@/components/ui/button";`
+
+more [shadcn/ui components](https://ui.shadcn.com/docs/components/accordion)
