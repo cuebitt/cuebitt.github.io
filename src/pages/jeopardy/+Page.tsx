@@ -9,9 +9,12 @@ import {
 	DialogDescription,
 	DialogHeader,
 	DialogTitle,
+	DialogTrigger,
 } from "@/components/ui/dialog";
 import { Textarea } from "@/components/ui/textarea";
 import { Link } from "@/components/Link";
+import { CircleHelp } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface GameJson {
 	categories: {
@@ -68,12 +71,39 @@ export default function Page() {
 	return (
 		<>
 			<header className="mb-5">
-				<hgroup>
-					<h1 className="text-4xl font-extrabold">Jeopardy Game JSON Maker</h1>
-					<h2 className="text-xl font-semibold">
-						for Cuebitt's Jeopardy VRChat World!
-					</h2>
-				</hgroup>
+				<div className="flex flex-row justify-between">
+					<hgroup>
+						<h1 className="text-4xl font-extrabold">
+							Jeopardy Game JSON Maker
+						</h1>
+						<h2 className="text-xl font-semibold">
+							for Cuebitt's Jeopardy VRChat World!
+						</h2>
+					</hgroup>
+
+					<Dialog>
+						<DialogTrigger asChild>
+							<Button className="flex flex-row gap-2">
+								<CircleHelp /> What's this?
+							</Button>
+						</DialogTrigger>
+						<DialogContent className="sm:max-w-[425px]">
+							<DialogHeader>
+								<DialogTitle className="text-3xl mb-5">About</DialogTitle>
+								<DialogDescription>
+									<p className="text-lg">
+										This is a tool to generate a JSON file for use in a Jeopardy
+										game world in VRChat that I'm making.
+										<br />
+										<br />
+										You can write all your own questions and load it in game to
+										play a real game of Jeopardy in front of a live audience!
+									</p>
+								</DialogDescription>
+							</DialogHeader>
+						</DialogContent>
+					</Dialog>
+				</div>
 			</header>
 			<main className="mb-10">
 				<div className="container mx-auto">
