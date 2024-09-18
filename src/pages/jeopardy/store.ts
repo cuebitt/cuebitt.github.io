@@ -12,11 +12,14 @@ interface JeopardyState {
 
 	showQuestion: boolean;
 	setShowQuestion: (value: boolean) => void;
+
+	values: number[];
+	setValues: (values: number[]) => void;
 }
 
 interface QuestionWithAnswer {
-	question: string;
 	answer: string;
+	question: string;
 	isDailyDouble: boolean;
 }
 
@@ -65,4 +68,7 @@ export const useJeopardyStore = create<JeopardyState>((set) => ({
 
 	showQuestion: false,
 	setShowQuestion: (value: boolean) => set({ showQuestion: value }),
+
+	values: [100, 200, 400, 600, 1000],
+	setValues: (values: number[]) => set({ values }),
 }));

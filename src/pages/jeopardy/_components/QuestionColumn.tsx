@@ -1,6 +1,7 @@
 import { useJeopardyStore } from "../store";
 import { Input } from "@/components/ui/input";
 import { nanoid } from "nanoid";
+import { useState } from "react";
 
 export const QuestionColumn = ({ index = 0, showQuestion = false }) => {
 	const categories = useJeopardyStore((state) => state.categories);
@@ -11,13 +12,17 @@ export const QuestionColumn = ({ index = 0, showQuestion = false }) => {
 	const setSelected = useJeopardyStore((state) => state.setSelected);
 	const selected = useJeopardyStore((state) => state.selected);
 
+	const [currCategory, setCurrCategory] = useState(categories[index]);
+
 	return (
 		<>
 			<div className="flex flex-col gap-2">
 				<Input
 					type="text"
-					value={categories[index]}
-					onChange={(e) => setCategory(index, e.target.value || "")}
+					value={currCategory}
+					onChange={(e) => setCurrCategory(e.target.value)}
+					onBlur={() => setCategory(index, currCategory)}
+					key="category-input"
 				></Input>
 
 				{Array.from({ length: 5 }).map((_, idx) => (

@@ -12,7 +12,10 @@ import { Switch } from "@/components/ui/switch";
 import { useState, useEffect } from "react";
 import { useJeopardyStore } from "../store";
 
-export const Settings = () => {
+interface SettingsProps {
+	onExport?: () => void;
+}
+export const Settings = ({ onExport = () => {} }: SettingsProps) => {
 	const selected = useJeopardyStore((state) => state.selected);
 	const setQuestion = useJeopardyStore((state) => state.setQuestion);
 	const questionCols = useJeopardyStore((state) => state.questionCols);
@@ -108,7 +111,7 @@ export const Settings = () => {
 								/>
 								<Label htmlFor="show-question">Show Questions</Label>
 							</div>
-							<Button>Export</Button>
+							<Button onClick={onExport}>Export</Button>
 						</div>
 					</CardContent>
 				</Card>
