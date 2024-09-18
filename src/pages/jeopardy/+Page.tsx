@@ -44,7 +44,7 @@ export default function Page() {
 
 	return (
 		<div className="container mx-auto">
-			<div className="flex flex-row gap-2">
+			<div className="flex flex-row gap-2 justify-center">
 				{Array.from({ length: 6 }).map((_, idx) => {
 					return (
 						<QuestionColumn

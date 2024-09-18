@@ -23,11 +23,12 @@ export const QuestionColumn = ({ index = 0, showQuestion = false }) => {
 					onChange={(e) => setCurrCategory(e.target.value)}
 					onBlur={() => setCategory(index, currCategory)}
 					key="category-input"
+					className="w-48"
 				></Input>
 
 				{Array.from({ length: 5 }).map((_, idx) => (
 					<div
-						className={`${selected.col == index && selected.row == idx ? "border-4" : "border"} h-24 rounded-lg transition-transform duration-300 hover:scale-105`}
+						className={`${selected.col == index && selected.row == idx ? "border-4" : "border"} h-24 w-48 rounded-lg transition-transform duration-300 hover:scale-105 overflow-hidden`}
 						key={nanoid()}
 						onClick={() => setSelected(idx, index)}
 					>
