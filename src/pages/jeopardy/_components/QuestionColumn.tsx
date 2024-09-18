@@ -1,5 +1,6 @@
 import { useJeopardyStore } from "../store";
 import { Input } from "@/components/ui/input";
+import clsx from "clsx";
 import { nanoid } from "nanoid";
 import { useState } from "react";
 
@@ -28,7 +29,20 @@ export const QuestionColumn = ({ index = 0, showQuestion = false }) => {
 
 				{Array.from({ length: 5 }).map((_, idx) => (
 					<div
-						className={`${selected.col == index && selected.row == idx ? "border-4" : "border"} h-24 w-48 rounded-lg transition-transform duration-300 hover:scale-105 overflow-hidden`}
+						className={clsx({
+							"border-4": selected.col == index && selected.row == idx,
+							border: selected.col != index || selected.row != idx,
+							"border-sky-500": questionCol.questions[idx].isDailyDouble,
+							"h-28": true,
+							"w-48": true,
+							"rounded-lg": true,
+							"transition-transform": true,
+							"duration-300": true,
+							"hover:scale-105": true,
+							"overflow-hidden": true,
+							"p-1": true,
+							"text-md": true,
+						})}
 						key={nanoid()}
 						onClick={() => setSelected(idx, index)}
 					>
