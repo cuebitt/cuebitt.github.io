@@ -21,7 +21,7 @@ export const QuestionColumn = ({ index = 0, showQuestion = false }) => {
 
 				{Array.from({ length: 5 }).map((_, idx) => (
 					<div
-						className="border-2 h-24"
+						className="border h-24 rounded-lg transition-transform duration-300 hover:scale-105"
 						key={nanoid()}
 						onClick={() => setSelected(idx, index)}
 					>
