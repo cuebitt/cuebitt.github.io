@@ -3,11 +3,7 @@
 
 import { components, hooks, utils } from "@generouted/react-router/client";
 
-export type Path =
-	| `/`
-	| `/jeopardy`
-	| `/jeopardy/components/QuestionColumn`
-	| `/jeopardy/components/Settings`;
+export type Path = `/` | `/jeopardy`;
 
 export type Params = {};
 
