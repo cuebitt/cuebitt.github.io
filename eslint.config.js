@@ -19,7 +19,7 @@ export default tseslint.config(
 		}
 	},
 	{
-		files: ['**/*.svelte'],
+		files: ['**/*.svelte', '**/.ts'],
 		languageOptions: {
 			parserOptions: {
 				parser: tseslint.parser
@@ -27,6 +27,6 @@ export default tseslint.config(
 		}
 	},
 	{
-		ignores: ['build/', '.svelte-kit/', 'dist/']
+		ignores: ['build/', '.svelte-kit/', 'dist/', 'src/lib/components/ui/']
 	}
 );

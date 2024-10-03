@@ -1,0 +1,167 @@
+{
+	"categories": {
+		"Furry Mancrushes": [
+			{
+				"response": "Who is Incineroar?",
+				"prompt": "A heel tiger that's on fire.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "Who is Bowser?",
+				"prompt": "He's a turtle dad and he's very bad.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "Who is Ben Bigger?",
+				"prompt": "He's an accountant who only needs one eye to swing around a concrete pillar.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "Who is Bandit Heeler?",
+				"prompt": "An Australian Archaeologist with an equal number of brothers and daughters.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "Who is Tony the Tiger?",
+				"prompt": "A blue-nosed twitch streamer who is banned in at least 4 countries.",
+				"isDailyDouble": false
+			}
+		],
+		"Con Drama": [
+			{
+				"response": "What is Biggest Little Fur Con?",
+				"prompt": "Attendees displayed an unauthorized pizza topping at this convention.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is Free Fur All?",
+				"prompt": "This \"convention\" was attended by a fursuiter with the world's worst bowl cut.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is Texas Furry Fiesta?",
+				"prompt": "A next-gen portrait shot on an iPhone 15 pro haunted this convention.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is Furality?",
+				"prompt": "You can make anyone who bothers you disappear at this convention.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is DEF CON?",
+				"prompt": "A non-furry convention attended by a lot of furries that is widely misunderstood.",
+				"isDailyDouble": false
+			}
+		],
+		"Information Technology": [
+			{
+				"response": "What is Rebooting?",
+				"prompt": "Probably the thing people lie about doing the most.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is Two-Factor Authentication?",
+				"prompt": "Just a password alone isn't enough when using this to log in.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is a Worm?",
+				"prompt": "You can use them to catch a fish and infect a computer with contagious malware.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is A+?",
+				"prompt": "A high-grade, industry standard certification.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is a Help Desk?",
+				"prompt": "Even if you can't drive, you can work at one to respond to a ton of tickets.",
+				"isDailyDouble": false
+			}
+		],
+		"Fictional Species": [
+			{
+				"response": "What are protogens?",
+				"prompt": "A race of robotic anthropomorphic cyborgs have LCD screens for faces.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is a Taidum?",
+				"prompt": "A small canine loaf creature with a tadpole tail.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is a Pooltoy?",
+				"prompt": "A latex creature that floats on water.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is a Sergal?",
+				"prompt": "A shark-headed mammal with kangaroo feet.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What are Dragons?",
+				"prompt": "These winged reptilian creatures are known to hoard valuable items.",
+				"isDailyDouble": false
+			}
+		],
+		"Real(ly Obscure) Species": [
+			{
+				"response": "What are Bears?",
+				"prompt": "These o(h)-so large animals take very long naps.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is a Red Fox?",
+				"prompt": "Though this species has \"red\" in the name, many fursonas of this species are not red at all.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is a Maned Wolf?",
+				"prompt": "This apple-eating species has plenty of leg to stand on.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What are Martens?",
+				"prompt": "A species that shares a name with a line of boots made by someone with a graduate degree.",
+				"isDailyDouble": true
+			},
+			{
+				"response": "What is an Axolotl?",
+				"prompt": "This Mexican creature can regrow its own pink severed limbs.",
+				"isDailyDouble": false
+			}
+		],
+		"Lexicon and Lingo": [
+			{
+				"response": "What is a Fursona?",
+				"prompt": "An anthropomorphic animal character that represents someone personally.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is a Greymuzzle?",
+				"prompt": "A furry that can order off of the senior menu.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is Post-Con Depression?",
+				"prompt": "A profound sadness experienced after a convention.",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is \"Awoo\"?",
+				"prompt": "An alternative onomatopoeia used in place of \"howl\"",
+				"isDailyDouble": false
+			},
+			{
+				"response": "What is \"OwO\"?",
+				"prompt": "A face that says, \"what's this?\"",
+				"isDailyDouble": false
+			}
+		]
+	},
+	"values": [100, 200, 400, 600, 1000]
+}

@@ -44,8 +44,11 @@
 		]
 	},
 	"dependencies": {
+		"bits-ui": "^0.21.16",
 		"clsx": "^2.1.1",
+		"lucide-svelte": "^0.447.0",
 		"mode-watcher": "^0.4.1",
+		"nanoid": "^5.0.7",
 		"tailwind-merge": "^2.5.2",
 		"tailwind-variants": "^0.2.1"
 	}
