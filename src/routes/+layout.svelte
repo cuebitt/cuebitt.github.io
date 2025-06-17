@@ -9,4 +9,3 @@
 	{@render children()}
 </main>
 <footer></footer>
-

@@ -67,24 +67,24 @@
 		return btoa(binString);
 	}
 
-	let inputMarkdown = $state("");
-	let outputTMP = $state("");
+	let inputMarkdown = $state('');
+	let outputTMP = $state('');
 
 	const convertMdToTMP = (inputMd: string) => {
-		const converted = markdownToTMP(inputMarkdown.trim());
+		const converted = markdownToTMP(inputMd.trim());
 
 		const utf8Encoder = new TextEncoder();
 		return bytesToBase64(utf8Encoder.encode(converted));
-	}
+	};
 
 	const submitHandler = () => {
 		const changelog = {
 			updated: Date.now(),
 			changelog: convertMdToTMP(inputMarkdown)
-		}
+		};
 
 		outputTMP = JSON.stringify(changelog, null, 4);
-	}
+	};
 </script>
 
 <div class="grid h-full grid-cols-2 gap-2">
