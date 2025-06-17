@@ -1,5 +1,7 @@
 <script lang="ts">
 	import MarkdownIt from 'markdown-it';
+	import { Button } from '$lib/components/ui/button/index.js';
+	import { Textarea } from '$lib/components/ui/textarea/index.js';
 
 	const md = new MarkdownIt({
 		breaks: true,
@@ -89,10 +91,16 @@
 
 <div class="grid h-full grid-cols-2 gap-2">
 	<div class="flex h-full flex-col gap-0.5">
-		<textarea class="h-full" id="md-input" bind:value={inputMarkdown}></textarea>
-		<button class="border" id="submit-md" onclick={() => submitHandler()}>Submit</button>
+		<h2 class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+			Input
+		</h2>
+		<Textarea class="h-full" id="md-input" bind:value={inputMarkdown}></Textarea>
+		<Button class="border" id="submit-md" onclick={() => submitHandler()}>Submit</Button>
 	</div>
-	<div class="h-full">
-		<textarea class="size-full" id="md-output" readonly bind:value={outputTMP}></textarea>
+	<div class="flex h-full flex-col">
+		<h2 class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+			Output
+		</h2>
+		<Textarea class="size-full" id="md-output" readonly bind:value={outputTMP}></Textarea>
 	</div>
 </div>
