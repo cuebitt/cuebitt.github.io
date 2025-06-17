@@ -1,38 +1,25 @@
-# sv
+# cuebitt.github.io
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This repository holds my miscellanous web projects.
 
-## Creating a project
+## Usage
 
-If you're seeing this, you've probably already done this step. Congrats!
+A live build of this repository is hosted via [GitHub Pages](https://cuebitt.github.io).
 
-```bash
-# create a new project in the current directory
-npx sv create
+### Building
 
-# create a new project in my-app
-npx sv create my-app
+To build this project, Node.js is required. Clone the repository, then run the following commands in the root directory:
+
+```sh
+pnpm i
+pnpm run build
 ```
 
-## Developing
+### Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To run a local build during development, run the following commands:
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```sh
+pnpm i
+pnpm run dev
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
