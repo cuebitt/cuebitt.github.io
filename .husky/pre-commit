@@ -1,6 +1,5 @@
-
 if [[ "$OS" == "Windows_NT" ]]; then
-  npx.cmd lint-staged
+  pnpx.cmd lint-staged
 else
-  npx lint-staged
+  pnpx lint-staged
 fi  
